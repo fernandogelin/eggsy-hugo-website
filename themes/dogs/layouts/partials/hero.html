@@ -1,9 +1,15 @@
 <div class="video-section">
-<h1>{{ .Params.dog.name }}</h1>
+<div class="header">
+{{ readFile "/static/images/eggsy-name.svg" | safeHTML }}
+{{ range .Params.dog.qualities }}
+<p class="animate">{{ . }}</p>
+{{ end }}
+</div>
+<!-- <h1>{{ .Params.dog.name }}</h1> -->
 <div class="video-container">
   <div class="color-overlay"></div>
-  <video autoplay muted loop poster="{$.Site.BaseURL}}images/eggsy-thumbnail.jpg" >
-    <source src="{{$.Site.BaseURL}}videos/eggsy-silent-era.mp4" type="video/mp4">
+  <video autoplay muted loop poster="{{$.Site.BaseURL}}images/{{ .Params.hero.poster }}" >
+    <source src="{{$.Site.BaseURL}}videos/{{ .Params.hero.video }}" type="video/mp4">
   </video>
 </div>
 </div>
