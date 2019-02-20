@@ -12,11 +12,11 @@ dog:
   name: Eggsy
   surname: Morey-Gelin
   qualities:
-    - energetic
-    - cuddler
-    - little
-    - smart
-    - cute
+    - incansável
+    - carinhoso
+    - pequeno
+    - inteligente
+    - fofo
 
 bio:
 ---
