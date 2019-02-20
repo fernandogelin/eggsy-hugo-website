@@ -1,0 +1,12 @@
+<meta charset="utf-8">
+<meta name="google-signin-client_id" content="32788701431-c7hg231gslbjte3os81mubi4ph4536ud.apps.googleusercontent.com">
+<base href="{{ .Site.BaseURL }}">
+<title> {{ .Title }} </title>
+<link rel="canonical" href="{{ .Permalink }}">
+{{ if .RSSLink }}<link href="{{ .RSSLink }}" rel="alternate" type="application/rss+xml" title="{{ .Title }}" />{{ end }}
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+
+{{ $style := resources.Get "styles/style.sass"  | resources.ToCSS | resources.Minify }}
+
+<link rel="stylesheet" href="{{ $style.Permalink }}">

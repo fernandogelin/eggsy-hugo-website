@@ -1,0 +1,19 @@
+baseURL: https://eggsy.dog/
+languageCode: en-us
+title: Eggsy, the dog
+theme: dogs
+
+canonifyURLs: true
+relativeURLs: true
+
+DefaultContentLanguage: en
+languages:
+  en:
+    languageName: English
+    weight: 1
+    contentDir: content/english
+
+  pt:
+    languageName: Portuguese
+    weight: 2
+    contentDir: content/portuguese
