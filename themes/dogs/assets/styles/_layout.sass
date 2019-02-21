@@ -1,0 +1,37 @@
+// block
+.pl-8
+  padding-left: 8rem
+  +respond-to(smaller-screens)
+    padding-left: 1rem
+
+.pl-8-img
+  +respond-to(smaller-screens)
+    padding-left: 0 !important
+
+.pr-8
+  padding-right: 8rem
+  +respond-to(smaller-screens)
+    padding-right: 1rem
+
+.pr-8-img
+  +respond-to(smaller-screens)
+    padding-right: 0 !important
+
+.block
+  margin-top: 1rem
+  display: flex
+  flex-direction: column
+  flex-basis: 49%
+  justify-content: flex-start
+  +respond-to(smaller-screens)
+    flex-basis: 100%
+  h1
+    border-bottom: 6px solid purple
+  figure
+    padding: 3rem
+    img
+      max-width: 500px
+
+.border-shadow
+  border-radius: 2px
+  box-shadow: 3px 3px 10px lightgray

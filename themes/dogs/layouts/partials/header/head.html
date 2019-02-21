@@ -5,7 +5,6 @@
 <link rel="canonical" href="{{ .Permalink }}">
 {{ if .RSSLink }}<link href="{{ .RSSLink }}" rel="alternate" type="application/rss+xml" title="{{ .Title }}" />{{ end }}
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
 
 {{ $style := resources.Get "styles/style.sass"  | resources.ToCSS | resources.Minify }}
 

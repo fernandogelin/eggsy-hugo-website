@@ -1,0 +1,27 @@
+<div class="container-fluid">
+{{ range $index, $block := .Params.blocks }}
+  <div id="{{ urlize $block.title}}" class="row d-flex justify-content-between flex-wrap">
+  {{ if ne (mod $index 2) 0 }}
+  <div class="block pl-8 pr-8 bg-light shadow-sm">
+    <h1>{{ $block.title }}</h1>
+    <p>{{ $block.text | markdownify }}</p>
+  </div>
+  <div class="block pr-8 pr-8-img">
+    <figure>
+      <img src="{{ $.Site.BaseURL }}images/{{ $block.image }}">
+    </figure>
+  </div>
+  {{ else }}
+  <div class="block pl-8 pl-8-img">
+    <figure>
+      <img src="{{ $.Site.BaseURL }}images/{{ $block.image }}">
+    </figure>
+  </div>
+  <div class="block pr-8 pl-8 bg-light shadow-sm">
+    <h1>{{ $block.title }}</h1>
+    <p>{{ $block.text }}</p>
+  </div>
+  {{ end }}
+  </div>
+{{ end }}
+</div>
